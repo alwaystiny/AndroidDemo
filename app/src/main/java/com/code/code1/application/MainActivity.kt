@@ -15,5 +15,6 @@ class MainActivity : AppCompatActivity() {
     private fun initViews() {
         Log.e("cdk say" , "zjsb")
         Log.e("cdk say again" , "zjsb")
+        Log.e("cdk say again again" , "zjsb")
     }
 }
