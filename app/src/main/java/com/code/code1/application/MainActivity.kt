@@ -17,5 +17,6 @@ class MainActivity : AppCompatActivity() {
         Log.i("test","test")
         Log.i("test2","test222222")
         Log.i("test3","test3333333333333333")
+        Log.i("test4","test4444444444444")
     }
 }
