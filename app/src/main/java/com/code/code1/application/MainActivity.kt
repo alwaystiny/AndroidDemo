@@ -18,5 +18,12 @@ class MainActivity : AppCompatActivity() {
         Log.i("test2","test222222")
         Log.i("test3","test3333333333333333")
         Log.i("test4","test4444444444444")
+        initViews();
+    }
+
+    private fun initViews() {
+        Log.e("cdk say" , "zjsb")
+        Log.e("cdk say again" , "zjsb")
+        Log.e("cdk say again again" , "zjsb")
     }
 }
