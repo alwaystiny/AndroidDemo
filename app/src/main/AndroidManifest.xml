@@ -16,6 +16,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+
+
+
+        <!--集成友盟-->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5a39c50a8f4a9d0b9d00013a"/>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Umeng"/>
     </application>
 
 </manifest>
