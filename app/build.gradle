@@ -14,7 +14,7 @@ static releaseTime(){
 android {
     compileSdkVersion 26
     defaultConfig {
-        applicationId "com.code.code1.application"
+        applicationId 'com.code.demo'
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
@@ -26,6 +26,11 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+//            storeFile file("AndroidDemo/keyStore")
+//            storePassword "123456"
+//            keyAlias "key_alias"
+//            keyPassword "123456"
 
             // 多渠道打包时对每个渠道的apk进行重命名
             applicationVariants.all { variant->
@@ -42,12 +47,12 @@ android {
         }
     }
 
-    productFlavors{
-        xiaomi{}
-        huawei{}
-        baidu{}
-        wandoujia{}
-        yingyongbao{}
+    productFlavors {
+        xiaomi {}
+        huawei {}
+        baidu {}
+        wandoujia {}
+        yingyongbao {}
     }
     productFlavors.all {
         flavors -> flavors.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
@@ -55,11 +60,28 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    implementation 'com.android.support:design:26.1.0'
+
+    // Rx
+    compile 'io.reactivex.rxjava2:rxjava:2.1.5'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4'
+
+    // 网络
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    compile 'com.squareup.okhttp3:okhttp:3.9.0'
+    compile 'com.google.code.gson:gson:2.8.1'
+    compile 'com.github.bumptech.glide:glide:4.3.1'
+
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 }
