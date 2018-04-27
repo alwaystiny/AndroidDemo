@@ -26,5 +26,6 @@ class MainActivity : AppCompatActivity() {
         toolbar.title = "标题"
         toolbar.setNavigationIcon(R.mipmap.ic_launcher)
         fab.setOnClickListener(View.OnClickListener { Snackbar.make(findViewById(R.id.contentView),"wo shi sb",Snackbar.LENGTH_SHORT).show() })
+        // 测试git
     }
 }
